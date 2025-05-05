@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - SPV Art Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+   }
+   .gallery {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 2em 0;
+   }
+   .gallery-item {
+     background-color: white;
+     margin: 1em;
+     border: 1px solid #ccc;
+     width: 250px;
+     text-align: center;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   }
+   .gallery-item img {
+     width: 200%;
+     height: 200px;
+   }
+
+   h1 {
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+
+   .large-font {
+   font-size: 20px; /* Adjust the size as needed */
+ }
+
+ header {
+     background-color: #f4f4f4;
+     padding: 10px;
+     text-align: center;
+   }
+
+   a {
+     margin: 0 10px;
+     cursor: pointer;
+     text-decoration: none;
+     color: #333;
+   }
+
+   a:hover {
+     color: #007bff;
+   }
+
+   /* Dropdown Box Styling */
+   .dropdown-box {
+     display: none; /* Hidden by default */
+     position: absolute;
+     top: 60px;
+     left: 50%;
+     transform: translateX(-50%);
+     background-color: white;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     padding: 15px;
+     width: 200px;
+     z-index: 1000;
+     visibility: visible;
+   }
+
+   .dropdown-box h3 {
+     font-size: 1.2rem;
+     margin-bottom: 10px;
+     text-align: center;
+   }
+
+   .dropdown-box ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+   }
+
+   .dropdown-box li {
+     margin: 8px 0;
+   }
+
+   .dropdown-box li a {
+     text-decoration: none;
+     color: #333;
+     font-size: 1rem;
+   }
+
+   .dropdown-box li a:hover {
+     color: #007bff;
+   }
+
+   .dropdown-box ul li {
+   border-bottom: 1px solid #ccc; /* Adds a line below each item */
+   padding: 8px 0; /* Adds spacing between items */
+   }
+   .dropdown-box ul li:last-child {
+   border-bottom: none; /* Removes line from the last item */
+   }
+   </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar (same) -->
+  <header class="bg-white shadow p-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+            <a href="/">
+                <img src="C:\Users\DELL\Desktop\spv-.jpg"alt="SPV Art Gallery" style="height:90px; width:auto;">
+            </a>  
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-indigo-600 large-font">Home</a>
+        <a class="hover:text-indigo-600 large-font" id="artTrigger">Art</a>
+        <a href="artist.html" class="hover:text-indigo-600 large-font">Artists</a>
+        <a href="Exhibitionlink.html" class="hover:text-indigo-600 large-font">Exhibitions</a>
+        <a href="painting-course.html" class="hover:text-indigo-600 large-font">Courses</a>
+        <a href="about.html" class="hover:text-indigo-600 large-font">About</a>
+        <a href="contact.html" class="hover:text-indigo-600 large-font">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+   <!-- Dropdown Box -->
+   <div class="dropdown-box" id="artBox">
+    <ul>
+      <li><a href="painting.html">Paintings</a></li>
+      <li><a href="pottery.html">Pottery</a></li>
+      <li><a href="drawing.html">Drawings</a></li>
+      <li><a href="sketche.html">Sketches</a></li>
+      <li><a href="Quiling2.html">Quiling</a></li>
+      <li><a href="mandala art.html">mandala art</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript for Dropdown Functionality
+    const artTrigger = document.getElementById('artTrigger');
+    const artBox = document.getElementById('artBox');
+
+    artTrigger.addEventListener('click', () => {
+      // Toggle visibility of the dropdown box
+      if (artBox.style.display === 'none' || artBox.style.display === '') {
+        artBox.style.display = 'block';
+      } else {
+        artBox.style.display = 'none';
+      }
+    });
+
+    // Optional: Hide dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!artBox.contains(event.target) && event.target !== artTrigger) {
+        artBox.style.display = 'none';
+      }
+    });
+  </script>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-10">
+    <center><h2 class="text-4xl font-bold text-indigo-700 mb-4">About SPV Art Gallery</h2></center>
+    <p class="text-gray-600 text-lg" style="text-align: justify;">
+      SPV Art Gallery was founded in 2025 to showcase contemporary art and support emerging artists.<br>
+      Our mission is to inspire creativity and connect art lovers with world-class exhibitions and learning opportunities.<br>
+      With your continued support and art patronage we hope to make available handpicked Indian talent from across the country exclusively for you.<br>
+    With a fresh rebranded look, our gallery's vision is to encourage young Indian artists as well as to ensure that you as a collector get the best of Indian Art to enjoy in your personal spaces.<br>
+    Our art gallery, a sanctuary for artistic expression and a celebration of creativity in its purest form. Our mission is to bridge the gap between art and its audience, creating a space where imagination flourishes and emotions come alive.<br>
+We are proud to showcase a diverse collection of artworks, ranging from contemporary masterpieces to timeless classics, created by both emerging talents and acclaimed artists. Each exhibit is thoughtfully curated to spark inspiration, ignite conversations, and foster a deeper connection to the world of art.<br>
+    Our gallery is more than just a visual experience—it is a journey through stories, cultures, and perspectives. With every brushstroke, sculpture, and installation, we aim to evoke curiosity and reflection, encouraging visitors to see the world through an artist's eyes.<br>
+    Whether you're an art enthusiast, a casual observer, or someone seeking inspiration, our gallery offers a welcoming space for exploration, education, and appreciation. Join us as we celebrate the boundless possibilities of human creativity and the enduring power of art to transform lives.<br>
+</p>
+
+
+<!-- About Gallery Callout -->
+<div class="mt-16 bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-xl shadow-md">
+  <h3 class="text-2xl font-bold text-indigo-800 mb-2">Discover Our Story</h3>
+  <p class="text-gray-700 mb-4">
+    SPV Art Gallery is more than just a space for exhibitions — it's a sanctuary for emerging talent and a platform to inspire creativity. Learn about our mission, vision, and the journey behind our vibrant art community.
+  </p>
+  <a href="index.html">
+    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2 rounded-full transition">
+      Learn More About Us →
+    </button>
+  </a>
+</div>
+
+
+
+  </main>
+
+ 
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+    <p>&copy; <span id="year"></span> SPV Art Gallery. All rights reserved.</p>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+  </footer>
+
+</body>
+</html>
